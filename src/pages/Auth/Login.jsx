@@ -21,8 +21,10 @@ const Login = () => {
 
   useEffect(() => {
     // If the token does not exist in either state or storage, redirect to login
+    debugger
     if (isAuthenticatedState || isAuthenticatedStorage) {
-      window.location.href = "/";
+      debugger
+      navigate("/");
     }
   }, [isAuthenticatedState, isAuthenticatedStorage]);
 
