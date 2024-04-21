@@ -22,7 +22,6 @@ const menu = [
 ];
 
 function AdminDashboardSidebar() {
-  // const { i18n } = useTranslation();
   // const isEnglish = i18n.language === 'en-US';
   const location = useLocation();
 

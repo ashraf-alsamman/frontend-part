@@ -5,12 +5,10 @@ import FloatInput from "../../components/FloatLabel/index";
 import { login } from "../../redux/slices/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { t } = useTranslation();
 
   const loading = useSelector((state) => state.auth.loading);
 
@@ -82,7 +80,7 @@ const Login = () => {
                   color: "#012a2f",
                 }}
               >
-                {t("Sign in to your account")}
+                {"Sign in to your account"}
               </p>
               <p
                 style={{
@@ -93,9 +91,9 @@ const Login = () => {
                   width: "60%",
                 }}
               >
-                {t(
+                 
                   "Sign in now to manage your events, access your event permits and measure your performance",
-                )}
+                 
               </p>
             </div>
             <br />
@@ -122,14 +120,14 @@ const Login = () => {
             </Form.Item>
             <Form.Item>
               <Checkbox checked={isChecked} onChange={handleCheckboxChange}>
-                {t("Remember me")}
+                {"Remember me"}
               </Checkbox>
             </Form.Item>
 
             <br />
             <Form.Item>
               <Button type="primary" htmlType="submit" block>
-                {t("Sign In")}
+                {"Sign In"}
               </Button>
             </Form.Item>
           </div>

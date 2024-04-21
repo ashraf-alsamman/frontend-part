@@ -2,7 +2,6 @@ import React from "react";
 import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 import { Col, Row } from "antd";
-import { useTranslation } from "react-i18next";
 
 const HomeIcon = () => (
   <svg
@@ -65,7 +64,6 @@ const CustomSeparator = () => (
 );
 
 const MyBreadcrumb = ({ items }) => {
-  const { t } = useTranslation();
   return (
     <Row>
       <Col style={{ margin: "3px 5px 3px 5px" }}>
@@ -85,7 +83,7 @@ const MyBreadcrumb = ({ items }) => {
                     fontSize: "12px",
                   }}
                 >
-                  {t(item.text)}
+                  {item.text}
                 </Link>
               ) : (
                 <span
@@ -96,7 +94,7 @@ const MyBreadcrumb = ({ items }) => {
                     fontSize: "12px",
                   }}
                 >
-                  {t(item.text)}
+                  {item.text}
                 </span>
               )}
             </Breadcrumb.Item>

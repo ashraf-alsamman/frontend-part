@@ -5,15 +5,13 @@ import Text from "antd/lib/typography/Text";
 import Breadcrumb from "../components/Breadcrumb/index";
 import DashboardHeaderTitle from "../components/DashboardHeaderTitle";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 const Dashboard = (props) => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
 
   const breadcrumbItems = [
     {
-      text: t("Dashboard"),
+      text: "Dashboard",
     },
   ];
 

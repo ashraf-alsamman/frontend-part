@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Input, InputNumber } from "antd";
 import { Form } from "antd";
 import { useFormContext } from "../../Utils/FormContext";
-import { useTranslation } from "react-i18next";
 
 const FloatInput = (props) => {
   const [focus, setFocus] = useState(false);
@@ -25,7 +24,6 @@ const FloatInput = (props) => {
     pattern,
   } = props;
   const { form } = useFormContext();
-  const { t } = useTranslation();
 
   const handleTextChange = (e) => {
     const newValue = e.target.value;
@@ -71,7 +69,7 @@ const FloatInput = (props) => {
       <label
         className={focus || value ? "label as-label" : "label as-placeholder"}
       >
-        {focus || value ? t(label) : t(placeholder)}{" "}
+        {focus || value ? label : placeholder}{" "}
         {required ? <span className="text-danger">*</span> : null}
       </label>
     </div>

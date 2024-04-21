@@ -1,9 +1,7 @@
 import React from "react";
 import { Card } from "antd";
-import { useTranslation } from "react-i18next";
 
 const DetailsCard = ({ title, subtitle }) => {
-  const { t } = useTranslation();
   return (
     <div style={{ backgroundColor: "transparent" }}>
       <p
@@ -14,7 +12,7 @@ const DetailsCard = ({ title, subtitle }) => {
           color: "#012a2f",
         }}
       >
-        {t(title)}
+        {title}
       </p>
       <p
         style={{
@@ -24,7 +22,7 @@ const DetailsCard = ({ title, subtitle }) => {
           color: "#717a7b",
         }}
       >
-        {t(subtitle)}
+        {subtitle}
       </p>
     </div>
   );
